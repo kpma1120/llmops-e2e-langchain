@@ -1,0 +1,34 @@
+# Git metadata
+.git/
+.gitignore
+
+# Docker related
+Dockerfile
+.dockerignore
+
+# Virtual environment and Python cache
+.venv/
+__pycache__/
+
+# Development and test files
+requirements-dev.txt
+requirements-test.txt
+pyproject.toml
+test.py
+
+# Logs and test artifacts
+logs/
+test-results/
+.coverage
+.pytest_cache/
+.ruff_cache/
+
+# Local credentials and environment variables
+credentials/
+.env
+
+# Optional: Local ingestion script (not needed for final LLM app)
+ingestion.py
+
+# Optional: prebuilt Chroma DB (uncomment if pinecone is used instead)
+# chroma_db/

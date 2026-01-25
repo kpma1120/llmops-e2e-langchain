@@ -1,0 +1,17 @@
+# Virtual environment and Python cache
+.venv/
+__pycache__/
+
+# Logs and test artifacts
+logs/
+test-results/
+.coverage
+.pytest_cache/
+.ruff_cache/
+
+# Local credentials and environment variables
+credentials/
+.env
+
+# Optional: prebuilt Chroma DB (uncomment if not prefer to push to remote repo)
+# chroma_db/

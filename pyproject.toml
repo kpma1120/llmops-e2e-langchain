@@ -1,0 +1,54 @@
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B"]
+ignore = ["E203"]
+exclude = [
+    ".venv",
+    "__pycache__",
+    ".git",
+    "*.egg-info",
+    "logs",
+]
+
+[tool.ruff.lint.isort]
+known-first-party = [
+    "ingestion",
+    "backend",
+    "logger",
+]
+combine-as-imports = true
+
+[tool.ruff.format]
+
+indent-style = "space"
+skip-magic-trailing-comma = false
+
+[tool.pytest.ini_options]
+addopts = [
+    "-v",
+    "--cov=.",
+    "--cov-config=pyproject.toml",
+    "--cov-report=term-missing",
+    "--junitxml=test-results/junit.xml",
+]
+testpaths = ["."]
+python_files = ["test.py"]
+
+[tool.coverage.run]
+branch = true
+omit = [
+    ".venv/*",
+    "*/__pycache__/*",
+    "*/__init__.py",
+    "setup.py",
+    "logs/*",
+    "tests/*",
+    "migrations/*",
+]
+
+[tool.coverage.report]
+show_missing = true
+skip_covered = true

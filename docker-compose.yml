@@ -1,0 +1,13 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: llm_app
+    ports:
+      - "8501:8501"   # Streamlit default port
+    env_file:
+      - .env          # Load environment variables from local .env
+    volumes:
+      - ./credentials:/app/credentials:ro  # Mount credentials directory (read-only)
+    restart: unless-stopped

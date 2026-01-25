@@ -1,0 +1,23 @@
+# Core LLM frameworks
+langchain
+langchain-community
+langchain-chroma
+langchain-pinecone
+langchain-google-vertexai
+google-cloud-aiplatform
+transformers
+
+# Vector stores
+chromadb
+pinecone-client
+
+# Web / SSL
+certifi
+
+# Environment variables
+python-dotenv
+
+# Core testing tools
+pytest
+pytest-cov
+ruff
