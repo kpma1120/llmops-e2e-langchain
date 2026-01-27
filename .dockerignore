@@ -26,6 +26,7 @@ test-results/
 # Local credentials and environment variables
 credentials/
 .env
+.env.example
 
 # Optional: Local ingestion script (not needed for final LLM app)
 ingestion.py
